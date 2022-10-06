@@ -28,6 +28,7 @@ namespace MovieList
             services.AddControllersWithViews();
             //dependency injection
             services.AddDbContext<MovieContext>(options=>options.UseSqlServer(Configuration.GetConnectionString("MovieContext")));
+            services.AddRouting(options => { options.LowercaseUrls = true; options.AppendTrailingSlash = true; });    //this is a routing service. Add options to lamda.  
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
