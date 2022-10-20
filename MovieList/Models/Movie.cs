@@ -15,7 +15,7 @@ namespace MovieList.Models
         [Range(1889, 2050, ErrorMessage = "Year must be between 1889 and now.")]
         public int? Year { get; set; }
 
-        [Required(ErrorMessage = "Please enter a rating.")]
+        [Required(ErrorMessage = "Please enter a rating!")]
         [Range(1, 5, ErrorMessage = "Rating must be between 1 and 5.")]
         public int? Rating { get; set; }
 
